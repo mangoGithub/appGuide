@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星火—星火燎原，成就金融梦想！</title>
+	<meta name="description" content="星火是宜信公司推出，服务于内部员工及其亲友的财富管理服务和回馈计划，星火团队为广大宜信员工及亲朋好友，提供最好、最专业的财富管理服务，共同实现我们的梦想：普惠金融梦！">
+	<meta name="keywords" content="星火，财富管理，理财，普惠金融，理财服务，投资理财，互联网金融，星火团队">
+	<!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="stylesheet" href="css/guide.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+	<div id="wrapper" class="content">
+		<div class="wrapper">
+			<ul class="container">
+				<!-- 第一屏 -->
+				<li class="page page0">
+					<div class="content">              
+						<h1>星火</h1>
+                        <h2>一款会赚钱的APP</h2>
+                        <p>
+                        	<span class="y1"></span>
+                            <span class="y2"></span>
+                            <span class="y3"></span>
+                           
+                        </p>
+                        <p>
+                        	<em class="no1"></em>
+                            <em class="no2"></em>
+                            <em class="no3"></em>
+                            <em class="no4"></em>
+                            <em class="no5"></em>
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p>
+                        	<i class="fly"></i>
+                            <i class="line"></i>
+                        </p>
+						<div class="icos_arrow"></div>
+			        </div>
+				</li>
+				<!-- 第一屏-->
+				<li class="page page1">
+					<div class="content hide common">
+						<h1>私人定制</h1>
+                        <h2>独家特供</h2>
+                       	<p>
+                        	<span class="y1"></span>
+                            <span class="y2"></span>
+                            <span class="y3"></span>
+                            <span class="y4"></span>
+                        </p>
+                        <p>
+                        	<em class="no1"></em>
+                            <em class="no2"></em>
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        
+                        <h3>理财产品名称、期限、收益随心所欲 皆有你定</h3>
+						<div class="icos_arrow"></div>
+					</div>
+				</li>
+				
+				<!-- wei -->
+				<li class="page page2">
+					<div class="content hide">
+						<h1>理财经理专属服务平台</h1>
+                        <h2>宜信优质债权安心购</h2>
+                        <p>
+                        	<span class="y1"></span>
+                            <span class="y2"></span>
+                            <span class="y4"></span>
+                           
+                        </p>
+                        <p>
+                        	<em class="no1"></em>
+                            <em class="no2"></em>
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        
+                        <p>
+                        	<a href="javascript:;">注册开店</a>
+                            <a href="javascript:;">立即登录</a>
+                        </p>
+					</div>
+				</li>
+				<!-- wei -->
+			</ul>
+		</div>
+	</div>
+	<div class="landscape">
+        <div class="iphone"></div>
+        <div class="iphone_text">请将屏幕竖向浏览</div>
+    </div>
+	<script type="text/javascript" src="guide.js"></script>
+	<script type="text/javascript">
+
+        var wrapper = document.getElementById('wrapper');
+        var aBtn = document.getElementsByClassName('page2')[0].getElementsByTagName('a');
+        
+        halo.use('yscroll', 'loader', function(m){
+			console.log(m);
+	        var loader = new m.loader(['img/y3.png','img/icon.png','img/y1.png','img/y2.png']).loadend(function(){
+	            if(this._index == 4){      
+	                m.removeClass(wrapper, 'hide');
+	            }
+	        }).complete(function(){
+	            var _last_idx = 0;
+	            var wrapper_scroll = new m.yscroll('.wrapper', {
+	                Scontainer : '.container',
+	                hScroll : false,
+	                vScroll : true,
+	                momentum : true,
+	                bounce : false,
+	                snap: true,
+	                scrollBefore: function(name, e){
+	                	if(name.target == aBtn[0]){
+	                		//window.open("http://www.baidu.com/",'')
+							//alert('注册开店');
+	                	}
+						if(name.target == aBtn[1]){
+	                		//alert('立即登录');
+	                		//window.open("http://xinghuo.yixin.com/index.shtml/",'')
+	                	}
+	                },
+	                onScroll: function(name, obj){
+	                	
+	                },
+	                onTouchEnd: function(name, obj){	                	
+	                },
+	                scrollEnd: function(index){
+	                	var pages = this.$li;
+	                	for (var i = 0; i < pages.length; i++) {
+	                		halo.util.addClass(pages[i].querySelector('.content'), 'hide');      
+	                	};
+	                	halo.util.removeClass(pages[index].querySelector('.content'), 'hide');
+	                }
+	            });
+	        });
+        });
+
+		aBtn[0].onclick = function(){
+			alert(11);
+			window.open("http://www.baidu.com/",'')
+		}
+
+
+	</script>
+</body>
+</html>
